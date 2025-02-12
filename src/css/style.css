@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    body {
-        @apply px-8;
-    }
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	input[type="number"] {
+		-moz-appearance: textfield;
+	}
 }
