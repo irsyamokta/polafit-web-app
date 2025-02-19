@@ -10,7 +10,7 @@ const ExerciseRecomendation = () => {
     return (
         <section className="flex flex-col lg:flex-row lg:h-[100vh] justify-center items-center gap-5">
             <div className="flex flex-col justify-center items-center bg-primary w-full lg:w-1/2 h-screen gap-5">
-                <h1 className="text-white text-2xl font-semibold mb-10">Lengkapi Data</h1>
+                <h1 className="text-white text-2xl font-semibold">Lengkapi Data</h1>
                 <ExerciseForm
                     formData={formData}
                     handleChange={handleChange}
