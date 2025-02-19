@@ -28,10 +28,10 @@ const ExerciseResult: React.FC<ExerciseResultProps> = ({ result }) => {
     const exercise = exerciseData[result];
 
     return (
-        <div className="flex flex-col justify-center items-center gap-4 sm:w-1/2 px-8">
+        <div className="flex flex-col justify-center items-center gap-4 sm:w-1/2 px-4 py-6">
             <h1 className="text-2xl font-semibold mb-5">Rekomendasi Olahraga Anda</h1>
             <img src={exercise.img} alt={`Gambar ${result}`} className="rounded-2xl"/>
-            <h1 className="text-4xl font-bold">{result}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold">{result}</h1>
             <p className="text-center">{exercise.description}</p>
         </div>
     );
