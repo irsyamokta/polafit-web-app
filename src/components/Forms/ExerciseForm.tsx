@@ -1,4 +1,6 @@
 import { ChangeEvent, FormEvent } from 'react';
+import Back from '../Butttons/Back';
+import SubmitForm from '../Butttons/SubmitForm';
 
 interface InputFormData {
     height: string;
@@ -19,9 +21,9 @@ interface ExerciseFormProps {
 }
 
 const ExerciseForm: React.FC<ExerciseFormProps> = ({ formData, handleChange, handleSubmit }) => {
-    
+
     return (
-        <form className="w-full px-8" onSubmit={handleSubmit}>
+        <form className="w-full px-4" onSubmit={handleSubmit}>
             <div className="relative z-0 w-full mb-5 group">
                 <input
                     type="number"
@@ -133,7 +135,10 @@ const ExerciseForm: React.FC<ExerciseFormProps> = ({ formData, handleChange, han
                     </select>
                 </div>
             </div>
-            <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center">Submit</button>
+            <div className='flex justify-between gap-3'>
+                <Back />
+                <SubmitForm />
+            </div>
         </form>
     )
 }
