@@ -27,6 +27,7 @@ const useFormHandlers = () => {
     });
 
     const [result, setResult] = useState<string>('');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData({
@@ -37,6 +38,7 @@ const useFormHandlers = () => {
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setIsLoading(true);
         try {
             const response = await axios.post(
                 import.meta.env.VITE_API_BASE_URL + '/predict_exercise',
@@ -45,10 +47,12 @@ const useFormHandlers = () => {
             setResult(response.data.recommended_exercise);
         } catch (error) {
             console.error('Error fetching data:', error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
-    return { formData, handleChange, handleSubmit, result };
+    return { formData, handleChange, handleSubmit, result, isLoading };
 };
 
 export default useFormHandlers;
