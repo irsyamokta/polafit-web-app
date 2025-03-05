@@ -1,3 +1,5 @@
+import imageHero from "../assets/img-hero.png"
+import imageElement from "../assets/img-element.png"
 import { Link } from "react-router"
 import ButtonRecomendation from "../components/Butttons/Recomendation"
 import ButtonNutritionCheck from "../components/Butttons/NutritionCheck"
@@ -21,8 +23,8 @@ const Homepage = () => {
                         </Link>
                     </div>
                 </div>
-                <img src="/src/assets/img-hero.png" className="w-2/3 lg:w-2/5" alt="healthy food" />
-                <img src="/src/assets/img-element.png" className=" absolute bottom-0 right-0 h-28 w-full lg:h-auto -z-20" alt="wave" />
+                <img src={imageHero} className="w-2/3 lg:w-2/5" alt="healthy food" />
+                <img src={imageElement} className=" absolute bottom-0 right-0 h-28 w-full lg:h-auto -z-20" alt="wave" />
             </section>
         </>
     )

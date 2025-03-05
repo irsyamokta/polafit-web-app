@@ -1,4 +1,8 @@
 import React from 'react';
+import imageBicycle from "../../assets/result/bersepeda.png"
+import imageRunning from "../../assets/result/lari.png"
+import imageYoga from "../../assets/result/senam.png"
+import imageWeight from "../../assets/result/angkat-beban.png"
 
 interface ExerciseResultProps {
     result: string;
@@ -6,19 +10,19 @@ interface ExerciseResultProps {
 
 const exerciseData: Record<string, { img: string; description: string }> = {
     "Bersepeda": {
-        img: "src/assets/result/bersepeda.png",
+        img: imageBicycle,
         description: "Bersepeda adalah latihan yang meningkatkan daya tahan tubuh, menguatkan otot kaki, dan baik untuk kesehatan jantung."
     },
     "Lari": {
-        img: "src/assets/result/lari.png",
+        img: imageRunning,
         description: "Lari adalah olahraga kardiovaskular yang membantu membakar kalori, meningkatkan kesehatan jantung, dan menguatkan otot kaki."
     },
     "Senam": {
-        img: "src/assets/result/senam.png",
+        img: imageYoga,
         description: "Senam adalah latihan yang fleksibel dan dapat membantu meningkatkan kelincahan, kekuatan, serta kesehatan tubuh secara keseluruhan."
     },
     "Angkat Beban": {
-        img: "src/assets/result/angkat-beban.png",
+        img: imageWeight,
         description: "Angkat beban merupakan latihan kekuatan yang membantu membangun otot, meningkatkan kepadatan tulang, dan meningkatkan metabolisme."
     },
 };

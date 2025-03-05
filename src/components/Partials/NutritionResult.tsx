@@ -1,4 +1,12 @@
 import React from 'react';
+import iconCheck from '../../assets/icon/check.png';
+import iconServing from '../../assets/icon/serve.png';
+import iconCalories from '../../assets/icon/calories.png';
+import iconProtein from '../../assets/icon/protein.png';
+import iconFat from '../../assets/icon/fat.png';
+import iconCarb from '../../assets/icon/carb.png';
+import iconFiber from '../../assets/icon/fiber.png';
+import iconSugar from '../../assets/icon/sugar.png';
 
 interface NutritionData {
     ID: number;
@@ -17,13 +25,13 @@ interface NutritionResultProps {
 }
 
 const iconMap: { [key: string]: string } = {
-    Berat_per_Serving: "src/assets/icon/serve.png",
-    Kalori: "src/assets/icon/calories.png",
-    Protein: "src/assets/icon/protein.png",
-    Lemak: "src/assets/icon/fat.png",
-    Karbohidrat: "src/assets/icon/carb.png",
-    Serat: "src/assets/icon/fiber.png",
-    Gula: "src/assets/icon/sugar.png",
+    Berat_per_Serving: iconServing,
+    Kalori: iconCalories,
+    Protein: iconProtein,
+    Lemak: iconFat,
+    Karbohidrat: iconCarb,
+    Serat: iconFiber,
+    Gula: iconSugar,
 };
 
 const unitMap: { [key: string]: string } = {
@@ -41,21 +49,21 @@ const NutritionResult: React.FC<NutritionResultProps> = ({ result }) => {
     const nutritionItems = Object.entries(result)
         .filter(([key]) => key !== "ID" && key !== "Makanan")
         .map(([key, value]) => ({
-            img: iconMap[key] || "src/assets/icon/default.png",
+            img: iconMap[key],
             label: key,
             amount: `${value} ${unitMap[key] || ""}`.trim(),
         }));
 
     return (
         <div className="flex flex-col justify-center items-center gap-5 px-4 py-6 max-w-screen-md mx-auto">
-            <img src="src/assets/icon/check.png" alt="icon check" className="rounded-2xl w-24" />
+            <img src={iconCheck} alt="icon check" className="rounded-2xl w-24" />
             <h1 className="text-3xl md:text-4xl font-bold text-center">{result.Makanan}</h1>
 
             <div className="flex flex-col items-center gap-4 w-full max-w-lg mt-10">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
                     {nutritionItems.slice(0, 4).map((item, index) => (
                         <div key={index} className="flex flex-col justify-center items-center bg-slate-300 w-28 h-28 p-5 gap-2 rounded-lg">
-                            <img src={item.img} alt={item.label} className="w-10 h-10" />
+                            <img src={item.img} alt={item.label} className="w-14 h-14" />
                             <h1 className="text-lg font-bold">{item.amount}</h1>
                         </div>
                     ))}
@@ -64,7 +72,7 @@ const NutritionResult: React.FC<NutritionResultProps> = ({ result }) => {
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 place-items-center">
                     {nutritionItems.slice(4).map((item, index) => (
                         <div key={index} className="flex flex-col justify-center items-center bg-slate-300 w-28 h-28 p-5 gap-2 rounded-lg">
-                            <img src={item.img} alt={item.label} className="w-10 h-10" />
+                            <img src={item.img} alt={item.label} className="w-14 h-14" />
                             <h1 className="text-lg font-bold">{item.amount}</h1>
                         </div>
                     ))}
