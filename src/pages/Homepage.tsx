@@ -4,6 +4,7 @@ import { Link } from "react-router"
 import ButtonRecomendation from "../components/Butttons/Recomendation"
 import ButtonNutritionCheck from "../components/Butttons/NutritionCheck"
 import Navbar from "../components/Partials/Header"
+
 const Homepage = () => {
     return (
         <>
