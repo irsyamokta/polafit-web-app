@@ -17,7 +17,7 @@ const ExerciseRecomendation = () => {
                     handleSubmit={handleSubmit}
                 />
             </div>
-            <div className="w-full lg:w-1/2 flex justify-center items-center">
+            <div className="w-full lg:w-1/2 h-[100vh] flex justify-center items-center">
                 {isLoading ? (
                     <Spinner />
                 ) : result ? (
