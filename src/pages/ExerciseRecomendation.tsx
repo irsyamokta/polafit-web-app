@@ -2,10 +2,10 @@ import ExerciseForm from "../components/Forms/ExerciseForm";
 import ExerciseResult from "../components/Partials/ExerciseResult";
 import NoResult from "../components/Partials/NoResult";
 import Spinner from "../components/Partials/Spinner";
-import useFormHandlers from '../hooks/useFormHandlers';
+import useExerciseFormHandlers from '../hooks/useExerciseFormHandlers';
 
 const ExerciseRecomendation = () => {
-    const { formData, handleChange, handleSubmit, result, isLoading } = useFormHandlers();
+    const { formData, handleChange, handleSubmit, result, isLoading } = useExerciseFormHandlers();
 
     return (
         <section className="flex flex-col lg:flex-row lg:h-[100vh] justify-center items-center gap-5">
