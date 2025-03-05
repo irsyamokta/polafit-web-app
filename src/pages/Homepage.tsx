@@ -16,7 +16,7 @@ const Homepage = () => {
                         <Link to="/rekomendasi-olahraga">
                             <ButtonRecomendation />
                         </Link>
-                        <Link to="/">
+                        <Link to="/cek-nutrisi">
                             <ButtonNutritionCheck />
                         </Link>
                     </div>
