@@ -3,12 +3,12 @@ import imageElement from "../assets/img-element.png"
 import { Link } from "react-router"
 import ButtonRecomendation from "../components/Butttons/Recomendation"
 import ButtonNutritionCheck from "../components/Butttons/NutritionCheck"
-import Navbar from "../components/Partials/Navbar"
+import Navbar from "../components/Partials/Header"
 const Homepage = () => {
     return (
         <>
             <Navbar />
-            <section className="h-[100vh] flex flex-col justify-center items-center lg:flex-row py-16 md:py-56 lg:py-20 px-4">
+            <section className="relative h-[100vh] flex flex-col justify-center items-center lg:flex-row py-20 md:py-56 lg:py-28 px-4">
                 <div className="py-8 mx-auto">
                     <h1 className="mb-8 text-3xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl 2xl:text-7xl">Bantu Kamu Sehat dengan Pola yang Tepat</h1>
                     <p className="mb-8 text-base font-normal text-gray-500 md:text-lg lg:text-xl">
@@ -23,7 +23,7 @@ const Homepage = () => {
                         </Link>
                     </div>
                 </div>
-                <img src={imageHero} className="w-2/3 lg:w-2/5" alt="healthy food" />
+                <img src={imageHero} className="w-5/6 lg:w-2/5" alt="healthy food" />
                 <img src={imageElement} className=" absolute bottom-0 right-0 h-28 w-full lg:h-auto -z-20" alt="wave" />
             </section>
         </>
