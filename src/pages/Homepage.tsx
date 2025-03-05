@@ -24,7 +24,7 @@ const Homepage = () => {
                         </Link>
                     </div>
                 </div>
-                <img src={imageHero} className="w-5/6 lg:w-2/5" alt="healthy food" />
+                <img src={imageHero} className="w-2/3 lg:w-2/5" alt="healthy food" />
                 <img src={imageElement} className=" absolute bottom-0 right-0 h-28 w-full lg:h-auto -z-20" alt="wave" />
             </section>
         </>
