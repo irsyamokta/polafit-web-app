@@ -13,7 +13,42 @@ https://polafit-web-app.vercel.app/
 
 ## Preview
 
+![App Screenshot](https://github.com/irsyamokta/assets/blob/7196773eff6c4c3b78b85839dee1096951b1f7d5/polafit/1.png)
+
+![App Screenshot](https://github.com/irsyamokta/assets/blob/7196773eff6c4c3b78b85839dee1096951b1f7d5/polafit/2.png)
+
+![App Screenshot](https://github.com/irsyamokta/assets/blob/7196773eff6c4c3b78b85839dee1096951b1f7d5/polafit/3.png)
+
+
 ## Panduan Instalasi
+Ikuti langkah-langkah berikut untuk menginstal Mitro Utomo di lokal Anda:
+<br>Nb. Pastikan lokal server Anda sudah berjalan, bisa menggunakan XAMPP, Laragon, atau sejenisnya.
+
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/irsyamokta/polafit-web-app.git
+   
+2. **Masuk ke Direktori Proyek Setelah repositori ter-clone**
+   ```bash
+   cd polafit-web-app
+    
+3. **Install Dependencies Pastikan Anda sudah menginstal Composer dan Node.js**
+   ```bash
+   npm install
+   
+4. **Konfigurasi .env**
+   ```bash
+   cp .env.example .env
+   
+5. **Masukkan URL API pada .env**
+   ```bash
+   VITE_API_BASE_URL= URL API PolaFit Machine Learning
+   
+6. **Jalankan Proyek**
+   ```bash
+   npm run dev
+
+7. Akses aplikasi melalui browser di alamat http://localhost:5173.
 
 ## Issue
 Jika Anda menemui masalah atau membutuhkan bantuan lebih lanjut, silakan buka issue di GitHub atau hubungi saya.
